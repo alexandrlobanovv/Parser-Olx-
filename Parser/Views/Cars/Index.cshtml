@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Parser.Models.ParserCore.Olx.Car>
+
+@{
+    ViewBag.Title = "Index";
+    WebGrid grid = new WebGrid(Model, rowsPerPage: 25);
+    
+}
+
+<h2> Data base</h2>
+
+<p>
+    @Html.ActionLink("Admin Panel", "Admin")
+</p>
+<table class="blueTable">
+    <tr>
+        <td>
+            @grid.GetHtml(columns: new[]
+       {
+           grid.Column("Organization"),
+           grid.Column("Brand"),
+           grid.Column("Model"),
+           grid.Column("Price"),
+           grid.Column("BodyType"),
+           grid.Column("TypeOfFuel"),
+           grid.Column("Transmission"),
+           grid.Column("YearOfIssue"),
+           grid.Column("Colour"),
+           grid.Column("EngineCapacity"),
+           grid.Column("Mileage"),
+           grid.Column("Other")
+
+       })
+        </td>
+    </tr>
+
+</table>
