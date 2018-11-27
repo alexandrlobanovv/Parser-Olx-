@@ -28,7 +28,6 @@ namespace Parser.Models
                 var domParser = new HtmlParser();
                 var document = domParser.Parse(CarHtml);
 
-                var EngineCapacity =
                     car = new Car
                     {
                         Data_item = GetDataItem(document),
